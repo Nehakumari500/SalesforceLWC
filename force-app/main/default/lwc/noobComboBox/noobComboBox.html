@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-03-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="combobox">
+        <lightning-combobox label = "Accounts"
+                            value = {value}
+                            placeholder="Select Account"
+                            options = {options}
+                            onchange = {handleChange}>
+        </lightning-combobox>
+        
+        <p> Selected value is : {value}</p>
+    </lightning-card>
+</template>

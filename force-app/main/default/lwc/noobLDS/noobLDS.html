@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-05-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Record View Form">
+        <!-- density can be auto , compact    
+        onload = {onDataLoad}-->
+        <lightning-record-view-form
+                    record-id= {recordId}
+                    object-api-name= {objectAPI}
+                    density="compact"
+                    >
+
+             <lightning-output-field field-name={nameField}></lightning-output-field>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>

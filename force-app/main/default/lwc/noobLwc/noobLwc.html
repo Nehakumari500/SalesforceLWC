@@ -1,0 +1,15 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-03-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+   <lightning-card title = {myTitle}>
+     {content}
+     Hello {greeting}!
+     <lightning-input type= "text" label ="enter name" onchange={handleChange}></lightning-input>
+     <lightning-button variant = "brand" label = "count" onclick = {handleClick}></lightning-button>
+   </lightning-card> 
+</template>

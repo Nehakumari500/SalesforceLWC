@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-05-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title = "combobox card">
+        <lightning-combobox label="Accounts"
+                            value = {value}
+                            placeholder="Search Account"
+                            options={options}
+                            onchange ={handleChangeValue}>
+        </lightning-combobox>
+
+    </lightning-card>
+   <!-- hide and show of data table card -->
+   <template if:true={value}>
+       <lightning-card title=" Account's Contact datatable">
+        <div style="height:200px;" >
+           <lightning-datatable
+                            key-field="id"
+                            data ={data}
+                            columns={columns}
+                            onrowaction={handleRowAction}
+           ></lightning-datatable>
+        </div>
+       </lightning-card>
+   </template>
+
+</template>
