@@ -1,0 +1,37 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-15-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <div class="checkconstructor"></div>
+  <lightning-card title="Lifecycle hook parent Card">
+    <div class ="slds-var-m-around_medium">
+        <lightning-input type="text" onkeyup={changeHandler}></lightning-input>
+        {name}
+
+        <template if:true={isChildVisible}>
+            <lightning-button
+            varient="brand"
+            label="Remove Child"
+            title="Remove Child"
+            onclick={handleClick}
+            class="slds-var-m-left_x-small"></lightning-button>
+        </template>
+        <template if:false={isChildVisible}>
+            <lightning-button
+            varient="brand"
+            label="Show Child"
+            title="Show Child"
+            onclick={handleClick}
+            class="slds-var-m-left_x-small"></lightning-button>
+        </template>
+        <template if:true={isChildVisible}>
+            <c-life-cycle-child></c-life-cycle-child>
+        </template>
+        
+    </div>
+  </lightning-card> 
+</template>
