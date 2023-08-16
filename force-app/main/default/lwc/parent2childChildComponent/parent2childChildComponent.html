@@ -1,0 +1,47 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-16-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title ={cardHeading} >
+        <!-- parent to child primitive data type -->
+        <div class="slds-notify_alert slds-theme_error" role="alert">
+           {number}{message}{isValid}
+        </div>
+    </lightning-card>
+        <!-- parent to child non primitive data type  -->
+        <lightning-card title ="parent to child non primitive data communication">
+            <div class="slds-var-m-around_medium">
+        <lightning-carousel disable-auto-scroll>
+            <template for:each={carouselData} for:item="item">
+                <lightning-carousel-image
+                key={item.header}
+                src={item.src}
+                header ={item.header}
+                description ={item.description}
+                alternative-text = "First card accessible description."
+                href = "https://www.example.com">
+                </lightning-carousel-image>
+            </template>
+            
+        </lightning-carousel>
+    </div>
+    </lightning-card>
+
+     <!-- passing data from parent to child on action -->
+     <lightning-card title ="parent to child  data communication on action">
+        <div class="slds-var-m-around_medium">
+            <lightning-progress-bar value={progressValue} size="large"></lightning-progress-bar>
+        </div>
+    </lightning-card>
+
+    <!-- calling child method from parent -->
+    <lightning-card title ="calling child method from parent">
+        <div class="slds-var-m-around_medium">
+            <lightning-slider label="Volume" value={val} onchange={changeHandler}></lightning-slider>
+        </div>
+    </lightning-card>
+</template>

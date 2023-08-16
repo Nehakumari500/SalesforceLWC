@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-16-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+
+  By default boolean value goes as true . if we give is-valid . by default it's value will be true
+-->
+<template>
+    <lightning-card title ="parent to child  data communication ">
+        <div class="slds-var-m-around_medium">
+            <!-- passing primitive and non-primitive data from parent to child -->
+            <c-parent2child-child-component 
+            message =" Hurray!! I got data from parent component"
+            card-heading="Parent to Child Primitive data type communication"
+            number=20
+            is-valid=false
+            carousel-data={carouselData}
+            progress-value={percentage}
+            ></c-parent2child-child-component>
+            
+            <!-- passing data from parent to child on action -->
+            <lightning-input type="text" label="Enter some text" onkeyup={handleChange} ></lightning-input>
+            
+            <!-- calling child method from parent -->
+            <lightning-button variant="brand" label="Reset Slider"  onclick={handleClick} ></lightning-button>
+
+        </div>
+    </lightning-card>
+</template>
